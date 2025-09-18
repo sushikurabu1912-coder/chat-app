@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Discord風Webチャット</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+  <div id="sidebar">
+    <h3>オンラインユーザー</h3>
+    <div id="users"></div>
+  </div>
+
+  <div id="main">
+    <div id="profile">
+      <input id="nameInput" placeholder="名前"/>
+      <input type="file" id="iconInput"/>
+      <button id="registerBtn">登録</button>
+      <button id="editProfileBtn">変更</button>
+    </div>
+
+    <ul id="messages"></ul>
+    <div id="typingStatus"></div>
+
+    <div id="inputArea">
+      <input id="chatInput" placeholder="メッセージを入力..." />
+      <input type="file" id="fileInput"/>
+      <button id="sendBtn">送信</button>
+      <button id="sendFileBtn">送信</button>
+    </div>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
