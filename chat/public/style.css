@@ -1,0 +1,157 @@
+/* 全体レイアウト */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #2f3136; /* Discordのダーク背景 */
+  color: #ddd;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+/* 左側：ユーザーリスト */
+#users {
+  width: 200px;
+  background-color: #202225;
+  padding: 10px;
+  overflow-y: auto;
+  border-right: 1px solid #1e1f22;
+}
+
+#users div {
+  padding: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+#users div:hover {
+  background-color: #393c43;
+}
+
+#users img {
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* 右側：チャット */
+#chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#messages {
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* メッセージ */
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.message-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-header {
+  font-size: 0.85em;
+  color: #aaa;
+}
+
+.message-username {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.message-text {
+  margin: 2px 0;
+  color: #ddd;
+}
+
+/* 添付プレビュー */
+.message-attachment img,
+.message-attachment video {
+  max-width: 300px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.message-attachment audio {
+  margin-top: 4px;
+}
+
+.message-attachment a {
+  color: #4ea1f3;
+  text-decoration: none;
+}
+
+/* リンクプレビューカード */
+.preview-card {
+  display: block;
+  border: 1px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  margin-top: 5px;
+  text-decoration: none;
+  color: inherit;
+  background: #2b2b2b;
+}
+
+.preview-card img {
+  width: 100%;
+  display: block;
+}
+
+.preview-card div {
+  padding: 5px;
+  font-size: 0.85em;
+  color: #ccc;
+}
+
+/* 入力欄 */
+#chatInput,
+#nameInput {
+  background-color: #40444b;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  color: #fff;
+}
+
+#sendBtn,
+#registerBtn,
+#sendFileBtn {
+  background-color: #5865f2;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-left: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#sendBtn:hover,
+#registerBtn:hover,
+#sendFileBtn:hover {
+  background-color: #4752c4;
+}
