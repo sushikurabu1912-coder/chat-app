@@ -1,0 +1,35 @@
+body { margin:0; font-family:"Segoe UI", sans-serif; background:#2f3136; color:#ddd; }
+#app { display:flex; height:90vh; }
+#users { width:200px; background:#202225; padding:10px; overflow-y:auto; border-right:1px solid #1e1f22; }
+#users div { padding:6px; border-radius:4px; display:flex; align-items:center; cursor:pointer; }
+#users div:hover { background:#393c43; }
+#users img { border-radius:50%; margin-right:8px; }
+
+#chat { flex:1; display:flex; flex-direction:column; }
+#messages { flex:1; list-style:none; margin:0; padding:10px; overflow-y:auto; }
+
+.message { display:flex; align-items:flex-start; margin-bottom:12px; }
+.message-icon { width:40px; height:40px; border-radius:50%; margin-right:8px; }
+.message-content { display:flex; flex-direction:column; }
+.message-header { font-size:0.85em; color:#aaa; }
+.message-username { font-weight:bold; margin-right:5px; color:#fff; }
+.message-text { margin:2px 0; color:#ddd; }
+.message-attachment img, .message-attachment video { max-width:300px; border-radius:6px; margin-top:4px; }
+.message-attachment audio { margin-top:4px; }
+.message-attachment a { color:#4ea1f3; text-decoration:none; }
+.preview-card { display:block; border:1px solid #444; border-radius:8px; overflow:hidden; width:300px; margin-top:5px; text-decoration:none; color:inherit; background:#2b2b2b; }
+.preview-card img { width:100%; display:block; }
+.preview-card div { padding:5px; font-size:0.85em; color:#ccc; }
+
+.chat-input-area { display:flex; padding:10px; border-top:1px solid #1e1f22; }
+#chatInput { flex:1; padding:8px; border-radius:4px; border:none; background:#40444b; color:#fff; }
+#sendBtn,#sendFileBtn,#registerBtn { background:#5865f2; border:none; border-radius:4px; padding:8px 12px; margin-left:5px; color:#fff; cursor:pointer; }
+#sendBtn:hover,#sendFileBtn:hover,#registerBtn:hover { background:#4752c4; }
+
+.profile-area { padding:10px; border-top:1px solid #1e1f22; display:flex; align-items:center; }
+.profile-area input { margin-right:5px; padding:5px; border-radius:4px; border:none; background:#40444b; color:#fff; }
+
+#call-area { display:flex; justify-content:space-between; align-items:center; padding:5px 10px; border-bottom:1px solid #1e1f22; background:#2b2b2b; }
+#call-area span { color:#fff; }
+#call-area button { background:#5865f2; border:none; border-radius:4px; padding:6px 10px; margin-left:5px; color:#fff; cursor:pointer; }
+#call-area button:disabled { background:#444; cursor:not-allowed; }

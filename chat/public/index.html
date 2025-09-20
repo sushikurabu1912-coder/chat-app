@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Discord風チャット</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <!-- 左：オンラインユーザー -->
+  <div id="users"></div>
+
+  <!-- 右：チャット -->
+  <div id="chat">
+    <div id="call-area">
+      <span id="callWith">通話相手: なし</span>
+      <button id="hangupBtn" disabled>❌ 通話終了</button>
+    </div>
+
+    <ul id="messages"></ul>
+    <div class="chat-input-area">
+      <input id="chatInput" placeholder="メッセージを入力..." />
+      <button id="sendBtn">送信</button>
+      <input type="file" id="fileInput" />
+      <button id="sendFileBtn">📎</button>
+    </div>
+  </div>
+</div>
+
+<div class="profile-area">
+  <input id="nameInput" placeholder="名前" />
+  <input type="file" id="iconInput" />
+  <button id="registerBtn">登録</button>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
